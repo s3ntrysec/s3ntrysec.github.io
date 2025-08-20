@@ -14,10 +14,6 @@
   icon: "fa-solid fa-cube"
   url: "https://app.hackthebox.com/profile/1521317"
 
-- type: gospel
-  icon: "fa-solid fa-cross"
-  url: "https://bible.usccb.org/daily-bible-reading"
-
   #- type: rss
   #icon: "fas fa-rss"
   #noblank: true
