@@ -3,12 +3,13 @@ title: HTB - Forest
 description: ""
 date: 2024-09-15 06:25:00 -0600
 categories:
-  - CTF
-  - HTB
+  - writeups
+  - hackthebox
+  
 tags:
   - writeup
   - activedirectory
-  - hackthebox
+    - hackthebox
 ---
 ## Enumeration
 

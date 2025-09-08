@@ -31,7 +31,10 @@
 }
 
 %tag-hover {
+  @extend %link-color;
+
   background: var(--tag-hover);
+  border-color: var(--tag-hover);
   transition: background 0.35s ease-in-out;
 }
 
@@ -79,7 +82,7 @@
 }
 
 %rounded {
-  border-radius: 0px;
+  border-radius: v.$radius-lg;
 }
 
 %img-caption {

@@ -3,12 +3,12 @@ title: HTB - Hospital
 description: ""
 date: 2024-08-19 06:15:00 -0600
 categories:
-  - CTF
-  - HTB
+  - writeups
+  - hackthebox
 tags:
   - writeup
   - ghostscript
-  - hackthebox
+    - hackthebox
 ---
 
 Hospital is a medium-level challenge on HackTheBox, that covers a diverse range of exploitation techniques. Beginning with the discovery of a file upload vulnerability, leading to the exploitation of a privilege escalation flaw on a Linux server using 'unshare' [CVE-2023-2640 & CVE-2023-32629 GameOver(lay)]. Continuing with the creation of a malicious EPS file to exploit a command injection vulnerability in Ghostscript to get access to a Windows machine[CVE-2023-36664]. Additionally, finding various paths for achieving administrative access, such as exploiting misconfigurations in XAMPP by uploading an administrative webshell, and uncovering plaintext credentials via RDP.

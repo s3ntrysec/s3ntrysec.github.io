@@ -18,7 +18,7 @@
     $radius: calc(v.$radius-lg - 1px);
 
     padding: 0.75rem;
-    border-radius: 0px;
+    border-radius: $radius;
     border-bottom: 0;
 
     &.hide-border-bottom {
@@ -52,7 +52,7 @@
 .category-trigger {
   width: 1.7rem;
   height: 1.7rem;
-  border-radius: 0px;
+  border-radius: 50%;
   text-align: center;
   color: #6c757d !important;
 

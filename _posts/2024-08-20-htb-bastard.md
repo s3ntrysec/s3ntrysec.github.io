@@ -3,14 +3,15 @@ title: HTB - Bastard
 description: ""
 date: 2024-08-20 06:25:00 -0600
 categories:
-  - CTF
-  - HTB
+  - writeups
+  - hackthebox
+  
 tags:
   - writeup
   - drupal
   - potato_privesc
   - clsid
-  - hackthebox
+    - hackthebox
 ---
 
 ## Enumeration

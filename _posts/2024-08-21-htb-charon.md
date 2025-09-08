@@ -3,15 +3,16 @@ title: HTB - Charon
 description: ""
 date: 2024-08-21 11:20:00 -0600
 categories:
-  - CTF
-  - HTB
+  - writeups
+  - hackthebox
+  
 tags:
   - sqli
   - cracking_hashes
   - file_upload
   - rsa_decryption
   - suid_privesc
-  - hackthebox
+    - hackthebox
 ---
 ## Enumeration
 

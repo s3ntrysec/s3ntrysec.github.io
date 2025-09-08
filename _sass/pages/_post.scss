@@ -132,7 +132,7 @@ header {
   --wc-stm-form-button-border: 1px solid var(--btn-border-color);
   --wc-stm-form-submit-background-color: var(--sidebar-btn-bg);
   --wc-stm-form-cancel-background-color: var(--sidebar-btn-bg);
-  --wc-stm-form-button-background-color-hover: #c60505;
+  --wc-stm-form-button-background-color-hover: #007bff;
   --wc-stm-form-button-color-hover: white;
 
   font-size: 1rem;
@@ -143,9 +143,7 @@ header {
 
   .post-tag {
     &:hover {
-      @extend %link-hover;
       @extend %tag-hover;
-      @extend %no-bottom-border;
     }
   }
 }
@@ -190,12 +188,12 @@ header {
     }
 
     &:first-child {
-      border-radius: 0px;
+      border-radius: v.$radius-lg 0 0 v.$radius-lg;
       left: 0.5px;
     }
 
     &:last-child {
-      border-radius: 0px;
+      border-radius: 0 v.$radius-lg v.$radius-lg 0;
       right: 0.5px;
     }
   }
@@ -372,7 +370,7 @@ header {
 #toc-solo-trigger {
   color: var(--text-muted-color);
   border-color: var(--btn-border-color);
-  border-radius: 0px;
+  border-radius: v.$radius-lg;
 
   @include bp.xl {
     display: none !important;

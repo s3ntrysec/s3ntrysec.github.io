@@ -24,10 +24,10 @@
     background: none;
 
     %img-radius {
-      border-radius: 0px;
+      border-radius: v.$radius-lg v.$radius-lg 0 0;
 
       @include bp.md {
-        border-radius: 0px;
+        border-radius: 0 v.$radius-lg v.$radius-lg 0;
       }
     }
 
@@ -137,7 +137,7 @@
       display: -webkit-box;
       -webkit-box-pack: center;
       -webkit-box-align: center;
-      border-radius: 0px;
+      border-radius: 0.5rem;
       border: 0;
       background-color: inherit;
     }
@@ -160,7 +160,7 @@
       cursor: not-allowed;
 
       .page-link {
-        color: rgba(108, 117, 125, 0.57);
+        color: rgb(108 117 125 / 57%);
       }
     }
   } /* .page-item */
