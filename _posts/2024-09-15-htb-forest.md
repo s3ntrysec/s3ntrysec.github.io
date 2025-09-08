@@ -9,7 +9,10 @@ categories:
 tags:
   - writeup
   - activedirectory
-    - hackthebox
+  - hackthebox
+image:
+  path: https://htb-mp-prod-public-storage.s3.eu-central-1.amazonaws.com/avatars/7dedecb452597150647e73c2dd6c24c7.png 
+
 ---
 ## Enumeration
 

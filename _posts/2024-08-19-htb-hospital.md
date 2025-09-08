@@ -8,7 +8,10 @@ categories:
 tags:
   - writeup
   - ghostscript
-    - hackthebox
+  - hackthebox
+image:
+ path: https://htb-mp-prod-public-storage.s3.eu-central-1.amazonaws.com/avatars/e980d18b909fa0ba8f519cf9777fd413.png
+
 ---
 
 Hospital is a medium-level challenge on HackTheBox, that covers a diverse range of exploitation techniques. Beginning with the discovery of a file upload vulnerability, leading to the exploitation of a privilege escalation flaw on a Linux server using 'unshare' [CVE-2023-2640 & CVE-2023-32629 GameOver(lay)]. Continuing with the creation of a malicious EPS file to exploit a command injection vulnerability in Ghostscript to get access to a Windows machine[CVE-2023-36664]. Additionally, finding various paths for achieving administrative access, such as exploiting misconfigurations in XAMPP by uploading an administrative webshell, and uncovering plaintext credentials via RDP.

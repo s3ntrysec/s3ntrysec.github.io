@@ -12,7 +12,9 @@ tags:
   - file_upload
   - rsa_decryption
   - suid_privesc
-    - hackthebox
+  - hackthebox
+image:
+  path: https://htb-mp-prod-public-storage.s3.eu-central-1.amazonaws.com/avatars/8dc0d4a1171e71785b103879c3a3f09b.png
 ---
 ## Enumeration
 

@@ -11,7 +11,11 @@ tags:
   - drupal
   - potato_privesc
   - clsid
-    - hackthebox
+  - hackthebox
+
+image:
+ path: https://htb-mp-prod-public-storage.s3.eu-central-1.amazonaws.com/avatars/a8d2ae87fbe6d1ccfe93522d74defb3a.png
+
 ---
 
 ## Enumeration

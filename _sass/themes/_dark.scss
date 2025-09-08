@@ -2,9 +2,9 @@
   color-scheme: dark;
 
   /* Framework color */
-  --main-bg: rgb(27 27 30);
-  --mask-bg: rgb(68 69 70);
-  --main-border-color: rgb(44 45 45);
+  --main-bg: #111111 ;
+  --mask-bg: #292929 ;
+  --main-border-color: #444444;
 
   /* Common color */
   --text-color: rgb(175 176 177);
@@ -32,9 +32,9 @@
   );
 
   /* Sidebar */
-  --site-title-color: #717070;
+  --site-title-color:#d28445;
   --site-subtitle-color: #868686;
-  --sidebar-bg: #1e1e1e;
+  --sidebar-bg: #121212;
   --sidebar-border-color: #292929;
   --sidebar-muted-color: #868686;
   --sidebar-active-color: rgb(255 255 255 / 95%);
@@ -56,7 +56,7 @@
   --btn-paginator-hover-color: #2e2e2e;
 
   /* Posts */
-  --toc-highlight: rgb(116 178 243);
+  --toc-highlight: #d28445;
   --toc-popup-border-color: #373737;
   --tag-hover: rgb(43 56 62);
   --tb-odd-bg: #252526; /* odd rows of the posts' table */

@@ -78,8 +78,7 @@ main {
 
   img {
     height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
+    object-fit: scale-down;
 
     @extend %rounded;
 
@@ -135,7 +134,7 @@ main {
   overflow-wrap: break-word;
 
   @include bp.xl {
-    font-size: 1.03rem;
+    font-size: 1.2rem;
   }
 
   a {
